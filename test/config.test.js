@@ -15,10 +15,16 @@ describe('Configuration environment', () => {
                 done();
             })
             .catch(err => done(err))
-    })
+    });
 
-    // it('node environment runs development', () => {
-    //     expect(env.NODE_ENV).to.equal('development')
-    // })
+    it("Get User its has a response of the account and user_id", (done) => {
+        request(app).post('/test/request')
+            .then(res => {
+                let resp = res.body
+                expect(resp.id).to.equal(2)
+                expect(resp.account).to.equal('test')
+            })
+            .catch(err => done(err))
+    })
 
 })

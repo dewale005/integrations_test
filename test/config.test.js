@@ -11,7 +11,7 @@ describe('Configuration environment', () => {
         request(app).get('/test')
             .then(res => {
                 let resp = res.body.message;
-                expect('all users are fetch').to.equal(resp)
+                expect('all users are fetch all').to.equal(resp)
                 done();
             })
             .catch(err => done(err))

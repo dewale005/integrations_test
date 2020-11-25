@@ -18,11 +18,12 @@ describe('Configuration environment', () => {
     });
 
     it("Get User its has a response of the account and user_id", (done) => {
-        request(app).post('/test/request')
+        request(app).get('/test/request')
             .then(res => {
                 let resp = res.body
                 expect(resp.id).to.equal(2)
                 expect(resp.account).to.equal('test')
+                done();
             })
             .catch(err => done(err))
     })

@@ -4,7 +4,7 @@ var express = require('express');
 
 const testRouter = express.Router()
 
-testRouter.get('/', get_user)
-testRouter.post('/request', request_card)
+testRouter.get('/', get_user);
+testRouter.get('/request', request_card);
 
 module.exports = testRouter;

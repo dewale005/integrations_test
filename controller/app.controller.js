@@ -5,13 +5,6 @@ module.exports = {
 
     // request card api(user can request for a card with their account and user id)
     request_card(req, res, next) {
-        //payload for the user to request for card
-        let request_data = {
-            id: 2,
-            account: 'test'
-        }
-
-        // return response
-        res.status(200).json(request_data)
+        return res.status(200).json({id: 2, account: 'test'})
     }
 }

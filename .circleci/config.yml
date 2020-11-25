@@ -20,7 +20,7 @@ jobs:
             git config user.name "dewale005"
             git commit --allow-empty -m "Trigger deployment from circle ci"
             # Push quietly to prevent showing the token in log
-            git push -q https://github.com/dewale005/integrations_test.git master
+            git push origin master
 
 workflows:
     build-and-test:
